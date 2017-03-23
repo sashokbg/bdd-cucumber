@@ -1,11 +1,21 @@
 package bg.alexander;
 
+import bg.alexander.controllers.UserController;
+import bg.alexander.service.UserService;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 
+@ContextConfiguration
+@SpringBootTest
 public class ShowUserSteps {
+    @Autowired
+    private UserService service;
+
     @Given("^a user with id (\\d+)$")
     public void a_user_with_id(int arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions

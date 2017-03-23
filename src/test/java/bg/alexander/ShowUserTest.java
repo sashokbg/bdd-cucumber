@@ -7,6 +7,6 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:features",
-        format = "pretty")
+        plugin = "pretty")
 public class ShowUserTest {
 }
